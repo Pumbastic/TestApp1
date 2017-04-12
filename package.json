@@ -1,0 +1,31 @@
+{
+  "name": "testapp1",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pumbastic/TestApp1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pumbastic/TestApp1/issues"
+  },
+  "homepage": "https://github.com/Pumbastic/TestApp1#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.15.2",
+    "express3-handlebars": "^0.5.2",
+    "node-sass": "^4.5.2",
+    "path": "^0.12.7",
+    "promise-request": "^0.1.2",
+    "pug": "^2.0.0-beta11",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "description": ""
+}

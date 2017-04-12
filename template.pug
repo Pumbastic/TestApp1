@@ -1,0 +1,19 @@
+
+doctype html
+
+- for (var i = 0; i < data.length; i++)
+   .post
+      .post-title
+         h3 #{data[i].post.title}
+      .post-body
+         b #{data[i].post.body}
+      .comments
+         - for (var j = 0; j < data[i].comments.length; j++)
+            .comment
+               .comment-name
+                  p #{data[i].comments[j].name}
+               .comment-email
+                  p #{data[i].comments[j].email}
+               .comment-body
+                  p #{data[i].comments[j].body}
+               hr

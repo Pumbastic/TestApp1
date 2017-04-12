@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Test App</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+
+    {{#if showTests}}
+        <link rel="stylesheet" href="/vendor/mocha.css">
+    {{/if}}
+
+
+
+    <script src="//code.jquery.com/jquery-2.0.2.min.js"></script>
+</head>
+<body>
+    <header>
+        <p>Adrian Kontny</p>
+    </header>
+
+
+
+    {{#if showTests}}
+        <div id="mocha"></div>
+        <script src="/vendor/mocha.js"></script>
+        <script src="/vendor/chai.js"></script>
+        <script>
+            mocha.ui('tdd');
+            var assert = chai.assert;
+        </script>
+
+        <!-- insert test suites here -->
+        <script src="/qa/tests-global.js"></script>
+        {{#if pageTestScript}}
+            <script src="{{pageTestScript}}"></script>
+        {{/if}}
+        <!-- insert test suites here END -->
+        
+        <script>
+            mocha.run();
+        </script>
+        <hr>
+    {{/if}}
+
+
+
+    {{{body}}}
+</body>
+</html>
