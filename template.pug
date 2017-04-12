@@ -4,9 +4,9 @@ doctype html
 - for (var i = 0; i < data.length; i++)
    .post
       .post-title
-         h3 #{data[i].post.title}
+         h3 #{data[i].title}
       .post-body
-         b #{data[i].post.body}
+         b #{data[i].body}
       .comments
          - for (var j = 0; j < data[i].comments.length; j++)
             .comment

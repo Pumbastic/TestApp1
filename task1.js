@@ -1,11 +1,11 @@
 'use strict';
 
-var express = require('express');
-var router = express.Router();
-var cheerio = require('cheerio');
-var path = require('path');
-var bodyParser = require('body-parser');
-var request = require('request');
+const express = require('express');
+const router = express.Router();
+const cheerio = require('cheerio');
+const path = require('path');
+const bodyParser = require('body-parser');
+const request = require('request');
 
 router.use(bodyParser.urlencoded());
 
@@ -33,9 +33,8 @@ router.post('/search', function (req, res) {
             if ( error ) {
                 console.log("error while calling google", error);
                 return res.status(400).send(error + " >> error while calling google");
-            } else {
 
-                // *****************************************
+            } else {
                 var $ = cheerio.load(body);
                 $ = $('#search').find('ol');
                 if ($.length == 0) {
@@ -43,8 +42,8 @@ router.post('/search', function (req, res) {
                 } else {
                     res.render('task1', {data: $.html()} );
                 }
-                // *****************************************
             }
+
         });
     }
 });
