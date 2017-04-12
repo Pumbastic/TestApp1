@@ -8,7 +8,6 @@ const bodyParser = require('body-parser');
 const request = require('promise-request');
 const pug = require('pug');
 const template = pug.compileFile('template.pug');
-
 const config = require('./config');
 
 router.use(bodyParser.urlencoded());
